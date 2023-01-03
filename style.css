@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-size: inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(50, 100, 95);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-template-rows: repeat(6, 80px);
+    grid-template-columns: minmax(120px, auto) repeat(3, 100px);
+    gap: 0px;
+}
+
+.span-four {
+    grid-column: span 4;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.calculator-grid > button {
+    height: 100%;
+}
+
+.display {
+    background-color: rgba(17, 13, 13, 0.5);
+    height: 100%;
+    margin: 1rem 0rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.display > .display-previous {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+}
+
+.display > .display-current {
+    color: white;
+    font-size: 2rem;
+}
